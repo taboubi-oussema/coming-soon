@@ -1,0 +1,163 @@
+<div class="signup-container">
+
+  <div class="row g-0 h-100">
+    <!-- Signup Form Section -->
+    <div class="col-md-6 signup-form-section">
+      <div class="signup-content">
+        <!-- Logo -->
+        <div class="mb-5">
+          <a href="/" class="logo">BYKE</a>
+        </div>
+
+        <!-- Signup Header -->
+        <div class="mb-4">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <h1 class="signup-title">Sign Up</h1>
+          </div>
+          <div class="rider-tag">Rider <span class="badge">Beta</span></div>
+          <p class="welcome-text">
+            Welcome to Byke, create an account with us now.
+          </p>
+        </div>
+
+        <!-- Signup Form -->
+        <form (ngSubmit)="submitForm()">
+          <!-- Name Fields -->
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                class="form-control"
+                [(ngModel)]="signupData.firstName"
+                name="firstName"
+                placeholder="John"
+              />
+              <div *ngIf="!signupData.firstName && (signupData.firstName !== '')" class="text-danger">
+                <small>First Name is required.</small>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                class="form-control"
+                [(ngModel)]="signupData.lastName"
+                name="lastName"
+                placeholder="Doe"
+              />
+              <div *ngIf="!signupData.lastName && (signupData.lastName !== '')" class="text-danger">
+                <small>Last Name is required.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              [(ngModel)]="signupData.email"
+              name="email"
+              placeholder="johndoe@abcmail.com"
+            />
+            <div *ngIf="!signupData.email " class="text-danger">
+              <small>Email is required.</small>
+            </div>
+          </div>
+
+          <!-- State Field -->
+          <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <select
+              id="state"
+              class="form-select w-100"
+              [(ngModel)]="signupData.state"
+              name="state"
+            >
+              <option value="" selected>Select your state</option>
+              <option *ngFor="let state of states" [value]="state">
+                {{ state }}
+              </option>
+            </select>
+            <div *ngIf="!signupData.state" class="text-danger">
+              <small>State selection is required.</small>
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              [(ngModel)]="signupData.password"
+              name="password"
+              placeholder="8 or more characters"
+            />
+            <div *ngIf="signupData.password && signupData.password.length < 8" class="text-danger">
+              <small>Password must be at least 8 characters.</small>
+            </div>
+          </div>
+
+          <!-- Checkboxes -->
+          <div class="mb-4">
+            <div class="form-check mb-2">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="emailUpdates"
+                [(ngModel)]="signupData.emailUpdates"
+                name="emailUpdates"
+              />
+              <label class="form-check-label" for="emailUpdates">
+                Send me helpful and insightful emails
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="termsAccepted"
+                [(ngModel)]="signupData.termsAccepted"
+                name="termsAccepted"
+              />
+              <label class="form-check-label" for="termsAccepted">
+                Yes, I have read and agreed to the Thanex Terms of Service
+              </label>
+              <div *ngIf="!signupData.termsAccepted" class="text-danger">
+                <small>You must agree to the terms of service.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mb-3"
+
+          >
+            Create my account
+          </button>
+
+          <!-- Login Link -->
+          <div class="text-center">
+            <span class="text-muted">Already a user?</span>
+            <a routerLink="/login" class="login-link ms-1">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-md-6 d-none d-md-block image-section">
+      <div class="signup-image"></div>
+    </div>
+  </div>
+
+</div>

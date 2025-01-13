@@ -1,0 +1,123 @@
+/* signup.component.scss */
+.signup-container {
+  min-height: 100vh;
+  background-color: #F8FAFC;
+}
+
+.signup-form-section {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.signup-content {
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  color: #0027B3;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.rider-tag {
+  .badge {
+    background-color: #FFB800;
+    color: #fff;
+    font-size: 12px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+  }
+}
+
+.welcome-text {
+  color: #64748B;
+  margin-bottom: 2rem;
+}
+
+.form-control, .form-select {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #0027B3;
+  }
+}
+
+.form-select {
+  background-position: right 0.75rem center;
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+
+  .form-check-input {
+    border-color: #CBD5E1;
+
+    &:checked {
+      background-color: #0027B3;
+      border-color: #0027B3;
+    }
+  }
+
+  .form-check-label {
+    color: #64748B;
+    font-size: 14px;
+  }
+}
+
+.btn-primary {
+  background-color: #0027B3;
+  border-color: #0027B3;
+  padding: 0.75rem;
+  border-radius: 8px;
+
+  &:hover:not(:disabled) {
+    background-color: darken(#0027B3, 5%);
+  }
+
+  &:disabled {
+    background-color: #CBD5E1;
+    border-color: #CBD5E1;
+  }
+}
+
+.login-link {
+  color: #0027B3;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.image-section {
+  background-color: #F1F5F9;
+
+  .signup-image {
+    width: 90%;
+    height: 100%;
+    background-image: url('/assets/image2.png');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-form-section {
+    padding: 1.5rem;
+  }
+}

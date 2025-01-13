@@ -1,0 +1,125 @@
+<div class="login-container">
+  <div class="row g-0 h-100">
+    <!-- Login Form Section -->
+    <div class="col-md-6 login-form-section">
+      <div class="login-content">
+        <!-- Logo -->
+        <div class="mb-5">
+          <a href="/" class="logo">BYKE</a>
+        </div>
+
+        <!-- Login Header -->
+        <div class="mb-4">
+          <h1 class="login-title">Login</h1>
+          <div class="client-tag">Client <span class="badge">Beta</span></div>
+          <p class="welcome-text">Welcome to Byke, login to continue</p>
+        </div>
+
+        <!-- Login Form -->
+        <form
+          #loginForm="ngForm"
+          class="login-form"
+          (ngSubmit)="logFormData()"
+          novalidate
+        >
+          <!-- Email Field -->
+          <div class="form-group mb-4">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="johndoe@abcmail.com"
+              [(ngModel)]="loginData.email"
+              name="email"
+              #email="ngModel"
+              required
+              email
+            />
+            <!-- Email Validation Errors -->
+            <div
+              *ngIf="email.invalid && email.touched"
+              class="text-danger mt-1"
+            >
+              <small *ngIf="email.errors?.['required']"
+                >Email is required.</small
+              >
+              <small *ngIf="email.errors?.['email']"
+                >Enter a valid email.</small
+              >
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-group mb-4">
+            <label for="password" class="form-label">Password</label>
+            <div class="password-input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="8 or more characters"
+                [(ngModel)]="loginData.password"
+                name="password"
+                #password="ngModel"
+                required
+                minlength="8"
+              />
+            </div>
+            <!-- Password Validation Errors -->
+            <div
+              *ngIf="password.invalid && password.touched"
+              class="text-danger mt-1"
+            >
+              <small *ngIf="password.errors?.['required']"
+                >Password is required.</small
+              >
+              <small *ngIf="password.errors?.['minlength']">
+                Password must be at least 8 characters long.
+              </small>
+            </div>
+            <div class="d-flex justify-content-end mt-1">
+              <a href="/forgot-password" class="forgot-password"
+                >Forgot password?</a
+              >
+            </div>
+          </div>
+
+          <!-- Remember Me -->
+          <div class="form-check mb-4">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="rememberMe"
+              [(ngModel)]="loginData.rememberMe"
+              name="rememberMe"
+            />
+            <label class="form-check-label" for="rememberMe">
+              Remember me
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="btn btn-primary w-100 mb-3"
+            [disabled]="loginForm.invalid"
+          >
+            Login
+          </button>
+
+          <!-- Sign Up Link -->
+          <div class="text-center mt-4">
+            <span class="text-muted">New to Byke?</span>
+            <a href="/signup" class="sign-up-link ms-1">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-md-6 d-none d-md-block image-section">
+      <div class="login-image"></div>
+    </div>
+  </div>
+</div>

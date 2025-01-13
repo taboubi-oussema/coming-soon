@@ -1,0 +1,145 @@
+/* login.component.scss */
+.login-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.login-form-section {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.login-content {
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  color: #0027b3;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.client-tag {
+  margin-bottom: 0.5rem;
+
+  .badge {
+    background-color: #ffb800;
+    color: #fff;
+    font-size: 12px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+  }
+}
+
+.welcome-text {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #0027b3;
+  }
+}
+
+.password-input-group {
+  position: relative;
+
+  .password-toggle {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    padding: 0.25rem;
+
+    &:hover {
+      color: #0027b3;
+    }
+  }
+}
+
+.forgot-password {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+
+  &:hover {
+    color: #0027b3;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #0027b3;
+  border-color: #0027b3;
+}
+
+.btn-primary {
+  background-color: #0027b3;
+  border-color: #0027b3;
+  padding: 0.75rem;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: darken(#0027b3, 5%);
+  }
+}
+
+.google-btn {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sign-up-link {
+  color: #0027b3;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.image-section {
+  background-color: #f1f5f9;
+
+  .login-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/image1.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form-section {
+    padding: 1.5rem;
+  }
+}
