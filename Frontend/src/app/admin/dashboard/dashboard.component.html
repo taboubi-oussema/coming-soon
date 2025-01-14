@@ -1,0 +1,122 @@
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo-container mb-4">
+      <a href="/" class="logo">BYKE</a>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="/dashboard" class="nav-item active">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="/users" class="nav-item">
+        <i class="bi bi-people"></i>
+        <span>Users</span>
+      </a>
+      <a href="/messages" class="nav-item">
+        <i class="bi bi-chat"></i>
+        <span>Messages</span>
+      </a>
+      <a href="/delivery" class="nav-item">
+        <i class="bi bi-truck"></i>
+        <span>Delivery</span>
+      </a>
+      <a href="/verify" class="nav-item">
+        <i class="bi bi-shield-check"></i>
+        <span>Verify Identity</span>
+      </a>
+
+      <div class="nav-bottom">
+        <a href="/settings" class="nav-item">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="/logout" class="nav-item">
+          <i class="bi bi-box-arrow-left"></i>
+          <span>Log Out</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Bar -->
+    <header class="top-bar"></header>
+
+    <div class="dashboard-content">
+      <h1 class="page-title">Dashboard</h1>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let stat of stats" [class]="stat.color">
+          <div class="stat-icon">{{ stat.icon }}</div>
+          <div class="stat-info">
+            <h3>{{ stat.title }}</h3>
+            <div class="stat-value">{{ stat.value }}</div>
+            <div
+              class="stat-change"
+              [class.up]="stat.trend === 'up'"
+              [class.down]="stat.trend === 'down'"
+            >
+              {{ stat.change }} from yesterday
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Information -->
+      <div class="delivery-section">
+        <h2>Delivery Information</h2>
+        <div class="delivery-filters">
+          <input
+            type="text"
+            placeholder="Enter Customer Name"
+            class="form-control"
+          />
+          <input
+            type="text"
+            placeholder="Enter order number"
+            class="form-control"
+          />
+          <input type="date" placeholder="Start Date" class="form-control" />
+          <input type="date" placeholder="End Date" class="form-control" />
+        </div>
+
+        <div class="delivery-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>State</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of data">
+                <td>{{ item.First_Name }}</td>
+                <td>{{ item.Last_Name }}</td>
+                <td>{{ item.Email }}</td>
+                <td>{{ item.Password }}</td>
+                <td>{{ item.State }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-footer">
+          <div class="showing-entries">Showing 1 of 8 entries</div>
+          <div class="pagination">
+            <button class="btn btn-sm">Previous</button>
+            <span class="page-number active">1</span>
+            <span class="page-number">2</span>
+            <button class="btn btn-sm">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

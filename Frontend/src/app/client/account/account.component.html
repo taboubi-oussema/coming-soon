@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="container py-5">
+  <h2 class="text-center mb-5">Account Settings</h2>
+
+  <div class="card mx-auto" style="max-width: 800px">
+    <div class="card-body p-4">
+      <form (ngSubmit)="onSubmit()">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                [(ngModel)]="userData.First_Name"
+                name="name"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input
+                type="email"
+                class="form-control bg-light"
+                [(ngModel)]="userData.Last_Name"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                [(ngModel)]="userData.Email"
+                name="address"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">State</label>
+              <input
+                type="text"
+                class="form-control bg-light"
+                [(ngModel)]="userData.State"
+                name="city"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control bg-light"
+                [(ngModel)]="userData.Password"
+                name="password"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control bg-light"
+                [(ngModel)]="userData.Password"
+                name="phone"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button type="reset" class="btn btn-outline-secondary w-100 mb-3">
+            Edit details
+          </button>
+          <button type="submit" class="btn btn-info text-white w-100">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

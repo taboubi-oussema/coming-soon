@@ -7,17 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frontend';
-  // userData = {
-  //   name: '',
-  //   email: '',
-  //   address: '',
-  //   phone: '',
-  //   city: '',
-  //   password: ''
-  // };
-  // onSubmit() {
-
-  //     console.log('Form Submitted!', this.userData);
-
-  // }
+ 
 }

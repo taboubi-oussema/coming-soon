@@ -10,6 +10,10 @@ import { LoginComponent } from './client/auth/login/login.component';
 import { SignupComponent } from './client/auth/signup/signup.component';
 import { NavbarComponent } from './client/navbar/navbar.component';
 import { HomeComponent } from './client/home/home.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AccountComponent } from './client/account/account.component';
+
 
 
 
@@ -20,6 +24,10 @@ import { HomeComponent } from './client/home/home.component';
     SignupComponent,
     NavbarComponent,
     HomeComponent,
+    AdminComponent,
+    DashboardComponent,
+    AccountComponent,
+   
   ],
   imports: [
     BrowserModule,

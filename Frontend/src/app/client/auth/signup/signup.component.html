@@ -30,11 +30,11 @@
                 type="text"
                 id="firstName"
                 class="form-control"
-                [(ngModel)]="signupData.firstName"
+                [(ngModel)]="signupData.First_Name"
                 name="firstName"
                 placeholder="John"
               />
-              <div *ngIf="!signupData.firstName && (signupData.firstName !== '')" class="text-danger">
+              <div *ngIf="!signupData.First_Name && (signupData.First_Name !== '')" class="text-danger">
                 <small>First Name is required.</small>
               </div>
             </div>
@@ -44,11 +44,11 @@
                 type="text"
                 id="lastName"
                 class="form-control"
-                [(ngModel)]="signupData.lastName"
+                [(ngModel)]="signupData.Last_Name"
                 name="lastName"
                 placeholder="Doe"
               />
-              <div *ngIf="!signupData.lastName && (signupData.lastName !== '')" class="text-danger">
+              <div *ngIf="!signupData.Last_Name && (signupData.Last_Name !== '')" class="text-danger">
                 <small>Last Name is required.</small>
               </div>
             </div>
@@ -61,11 +61,11 @@
               type="email"
               id="email"
               class="form-control"
-              [(ngModel)]="signupData.email"
+              [(ngModel)]="signupData.Email"
               name="email"
               placeholder="johndoe@abcmail.com"
             />
-            <div *ngIf="!signupData.email " class="text-danger">
+            <div *ngIf="!signupData.Email " class="text-danger">
               <small>Email is required.</small>
             </div>
           </div>
@@ -76,7 +76,7 @@
             <select
               id="state"
               class="form-select w-100"
-              [(ngModel)]="signupData.state"
+              [(ngModel)]="signupData.State"
               name="state"
             >
               <option value="" selected>Select your state</option>
@@ -84,7 +84,7 @@
                 {{ state }}
               </option>
             </select>
-            <div *ngIf="!signupData.state" class="text-danger">
+            <div *ngIf="!signupData.State" class="text-danger">
               <small>State selection is required.</small>
             </div>
           </div>
@@ -96,11 +96,11 @@
               type="password"
               id="password"
               class="form-control"
-              [(ngModel)]="signupData.password"
+              [(ngModel)]="signupData.Password"
               name="password"
               placeholder="8 or more characters"
             />
-            <div *ngIf="signupData.password && signupData.password.length < 8" class="text-danger">
+            <div *ngIf="signupData.Password && signupData.Password.length < 8" class="text-danger">
               <small>Password must be at least 8 characters.</small>
             </div>
           </div>
@@ -112,7 +112,7 @@
                 type="checkbox"
                 class="form-check-input"
                 id="emailUpdates"
-                [(ngModel)]="signupData.emailUpdates"
+
                 name="emailUpdates"
               />
               <label class="form-check-label" for="emailUpdates">
@@ -124,13 +124,13 @@
                 type="checkbox"
                 class="form-check-input"
                 id="termsAccepted"
-                [(ngModel)]="signupData.termsAccepted"
+                [(ngModel)]="termsAccepted"
                 name="termsAccepted"
               />
               <label class="form-check-label" for="termsAccepted">
                 Yes, I have read and agreed to the Thanex Terms of Service
               </label>
-              <div *ngIf="!signupData.termsAccepted" class="text-danger">
+              <div *ngIf="!termsAccepted" class="text-danger">
                 <small>You must agree to the terms of service.</small>
               </div>
             </div>
