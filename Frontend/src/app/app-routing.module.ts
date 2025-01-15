@@ -6,6 +6,7 @@ import { HomeComponent } from './client/home/home.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AccountComponent } from './client/account/account.component';
+import { JobsComponent } from './jobs/jobs.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'Dashboar', component: DashboardComponent },
   { path: 'Account', component: AccountComponent },
+  { path: 'Jobs', component: JobsComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
 ];
 

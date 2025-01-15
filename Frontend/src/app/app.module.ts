@@ -13,6 +13,7 @@ import { HomeComponent } from './client/home/home.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AccountComponent } from './client/account/account.component';
+import { JobsComponent } from './jobs/jobs.component';
 
 
 
@@ -27,6 +28,7 @@ import { AccountComponent } from './client/account/account.component';
     AdminComponent,
     DashboardComponent,
     AccountComponent,
+    JobsComponent,
    
   ],
   imports: [

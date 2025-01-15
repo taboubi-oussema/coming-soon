@@ -1,0 +1,82 @@
+.job-card {
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .badge {
+    font-weight: normal;
+    background: transparent;
+  }
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &.spotify {
+      background-color: #1ED760;
+    }
+
+    &.pinterest {
+      background-color: #E60023;
+    }
+
+    &.google {
+      background-color: #4285F4;
+    }
+
+    &.apple {
+      background-color: #000000;
+    }
+
+    &.whatsapp {
+      background-color: #25D366;
+    }
+
+    &.dribbble {
+      background-color: #EA4C89;
+    }
+  }
+
+  .vr {
+    height: 12px;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .illustration-section {
+    height: 300px;
+  }
+
+  .plant {
+    width: 80px;
+  }
+
+  .lamp {
+    width: 30px;
+
+    &.lamp-left {
+      left: 15%;
+    }
+
+    &.lamp-right {
+      right: 15%;
+    }
+  }
+}
+/* Add these styles to job-page.component.scss */
+
