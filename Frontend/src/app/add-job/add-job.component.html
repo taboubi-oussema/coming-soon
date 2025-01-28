@@ -1,0 +1,94 @@
+<div class="container position-relative">
+  <!-- Application Form -->
+  <div class="position-absolute top-0 start-0 w-100 h-100">
+    <div class="card-body">
+      <form (ngSubmit)="submitJob()">
+        <div class="mb-3">
+          <label for="jobTitle" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="Enter job title"
+            [(ngModel)]="job.title"
+            name="title"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="companyName" class="form-label">Company</label>
+          <input
+            type="text"
+            class="form-control"
+            id="companyName"
+            placeholder="Enter company name"
+            [(ngModel)]="job.company"
+            name="company"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="jobLocation" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobLocation"
+            placeholder="Enter job location"
+            [(ngModel)]="job.location"
+            name="location"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="jobType" class="form-label">Type</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobType"
+            placeholder="Enter job type (e.g., Full Time, Part Time)"
+            [(ngModel)]="job.type"
+            name="type"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="jobCategory" class="form-label">Category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobCategory"
+            placeholder="Enter job category (e.g., Marketing, Design)"
+            [(ngModel)]="job.category"
+            name="category"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="jobSalary" class="form-label">Salary</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobSalary"
+            placeholder="Enter salary range (e.g., $2,000 - $5,000)"
+            [(ngModel)]="job.salary"
+            name="salary"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="salaryPeriod" class="form-label">Period</label>
+          <input
+            type="text"
+            class="form-control"
+            id="salaryPeriod"
+            placeholder="Enter salary period (e.g., Monthly)"
+            [(ngModel)]="job.period"
+            name="period"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Job</button>
+      </form>
+    </div>
+  </div>
+</div>

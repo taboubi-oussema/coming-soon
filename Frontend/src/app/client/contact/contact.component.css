@@ -1,0 +1,44 @@
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  .form-control {
+    padding: 1rem 1.5rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .contact-lightbulb {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    opacity: 0.1;
+  }
+
+  .contact-plane {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    opacity: 0.1;
+  }
+}
+
+
+.partner-logos {
+  img {
+    max-height: 40px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+

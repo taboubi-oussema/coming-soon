@@ -43,9 +43,9 @@ router.put("/", async (req, res) => {
 // delet user
 router.delete("/", async (req, res) => {
   try {
-    const newuser = await Users.deleteOne(req.params.id);
-
-    res.status(200).json(newuser);
+    const id = req.query.id;
+    const dletuser = await Users.findByIdAndDelete(id);
+    res.status(200).json(dletuser);
   } catch (error) {
     res.status(500).json({ message: "Server Error" });
   }

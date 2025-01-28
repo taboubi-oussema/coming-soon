@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2 class="h1 fw-bold mb-0">Add New Job</h2>
+  <a routerLink="/addJob" class="btn btn-dark btn-sm rounded-pill px-3">
+    ADD →
+  </a>
+</div>
+<div class="row g-4">
+  <div class="col-12 col-md-6 col-lg-4" *ngFor="let job of jobs">
+    <div class="card border-0 h-100 job-card">
+      <div class="card-body">
+        <!-- Tags -->
+        <div class="d-flex gap-2 mb-3">
+          <span
+            class="badge rounded-pill text-dark border border-dark-subtle px-3 py-2"
+            >{{ job.type }}</span
+          >
+          <span
+            class="badge rounded-pill text-dark border border-dark-subtle px-3 py-2"
+            >{{ job.location }}</span
+          >
+        </div>
+
+        <!-- Job Title & Logo -->
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div class="company-logo" [ngClass]="logoType">
+            <img
+              [src]="'assets/logo/' + logoType + '.png'"
+              [alt]="job.company"
+              class="img-fluid"
+            />
+          </div>
+          <h3 class="h5 mb-0 fw-bold">{{ job.title }}</h3>
+        </div>
+
+        <!-- Job Details -->
+        <div class="d-flex align-items-center text-muted small gap-3 mb-4">
+          <span>{{ job.category }}</span>
+          <span class="vr"></span>
+          <span>{{ job.salary }}</span>
+          <span class="vr"></span>
+          <span>{{ job.period }}</span>
+        </div>
+
+        <!-- Apply Button -->
+        <button (click)="showAlert()" class="btn w-100" [ngClass]="'btn-outline-dark'">
+          Apply Now
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

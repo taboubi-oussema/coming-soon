@@ -2,7 +2,7 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="logo-container mb-4">
-      <a href="/" class="logo">FIND JOBS</a>
+      <a routerLink="/" class="logo">FIND JOBS</a>
     </div>
 
     <nav class="nav-menu">
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <!-- Delivery Information -->
+
       <div class="delivery-section">
         <h2>Delivery Information</h2>
         <div class="delivery-filters">
@@ -86,24 +86,26 @@
             <!-- Table Header -->
             <thead>
               <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>State</th>
-                <th>Action</th>
-
+                <th>Title</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Salary</th>
+                <th>Period</th>
               </tr>
             </thead>
 
             <!-- Table Body -->
             <tbody>
               <tr *ngFor="let item of data">
-                <td>{{ item.First_Name }}</td>
-                <td>{{ item.Last_Name }}</td>
-                <td>{{ item.Email }}</td>
-                <td>{{ item.Password }}</td>
-                <td>{{ item.State }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.company }}</td>
+                <td>{{ item.location }}</td>
+                <td>{{ item.type }}</td>
+                <td>{{ item.category }}</td>
+                <td>{{ item.salary }}</td>
+                <td>{{ item.period }}</td>
                 <td>
                   <button
                     class="btn btn-danger btn-sm"

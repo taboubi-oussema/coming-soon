@@ -18,7 +18,7 @@ export class HomeComponent {
     {
       title: 'Lorem ipsum is placeholder text commonly used in the graphic......',
       excerpt: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web',
-      image: '../../assets/image10.png'
+      image: '../../../assets/image10.png'
     },
     {
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.......',
